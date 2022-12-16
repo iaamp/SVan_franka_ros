@@ -1,0 +1,62 @@
+start_joint_pose:
+  $(arg arm_id)_joint1: 0
+  $(arg arm_id)_joint2: -0.785398163397
+  $(arg arm_id)_joint3: 0
+  $(arg arm_id)_joint4: -2.35619449019
+  $(arg arm_id)_joint5: 0
+  $(arg arm_id)_joint6: 1.57079632679
+  $(arg arm_id)_joint7: 0.785398163397
+
+intermediate_joint_pose_0:
+  $(arg arm_id)_joint1: -0.8641877891473603
+  $(arg arm_id)_joint2: -0.18059758925524988
+  $(arg arm_id)_joint3: 0.40848978465192043
+  $(arg arm_id)_joint4: -2.491951908613506
+  $(arg arm_id)_joint5: 1.1812020783291182
+  $(arg arm_id)_joint6: 1.1938681883944404
+  $(arg arm_id)_joint7: -1.6249292089607241
+
+approach_platform_joint_pose:
+  $(arg arm_id)_joint1: -1.3906446381504367
+  $(arg arm_id)_joint2: 1.1364199784363564
+  $(arg arm_id)_joint3: 1.0229736590803375
+  $(arg arm_id)_joint4: -2.6220017346843623
+  $(arg arm_id)_joint5: 0.8367754392491447
+  $(arg arm_id)_joint6: 2.4228438155518637
+  $(arg arm_id)_joint7: -1.9009546227815595
+
+grab_platform_joint_pose:
+  $(arg arm_id)_joint1: -0.5563575872366584
+  $(arg arm_id)_joint2: 1.5132150194412686
+  $(arg arm_id)_joint3: 1.2691391250208797
+  $(arg arm_id)_joint4: -2.034350341249906
+  $(arg arm_id)_joint5: 1.3337626223431693
+  $(arg arm_id)_joint6: 2.8231536642558095
+  $(arg arm_id)_joint7: -2.186535991244205
+
+lift_platform_joint_pose:
+  $(arg arm_id)_joint1: -0.71069232574267
+  $(arg arm_id)_joint2: 1.5188144116482925
+  $(arg arm_id)_joint3: 1.672355803828345
+  $(arg arm_id)_joint4: -2.2411853105093456
+  $(arg arm_id)_joint5: 1.5186869497383584
+  $(arg arm_id)_joint6: 3.110910584198104
+  $(arg arm_id)_joint7: -2.17622686406661
+
+intermediate_joint_pose_1:
+  $(arg arm_id)_joint1: 0.5396292434676468
+  $(arg arm_id)_joint2: 1.1947589975176227
+  $(arg arm_id)_joint3: 1.6765395370351772
+  $(arg arm_id)_joint4: -2.5143777965746423
+  $(arg arm_id)_joint5: 1.4425567218330173
+  $(arg arm_id)_joint6: 2.8049257514612433
+  $(arg arm_id)_joint7: -1.8939149357094032
+
+ws_center_joint_pose:
+  $(arg arm_id)_joint1: 0.8720425419891089
+  $(arg arm_id)_joint2: 1.5925842897270608
+  $(arg arm_id)_joint3: 1.294776188599594
+  $(arg arm_id)_joint4: -2.228555187559964
+  $(arg arm_id)_joint5: 1.3832561211453545
+  $(arg arm_id)_joint6: 2.9110935452412487
+  $(arg arm_id)_joint7: -2.3531864098031714
