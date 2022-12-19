@@ -1,8 +1,8 @@
 ws_center_joint_pose:
-  $(arg arm_id)_joint1: 1.254251339000552
-  $(arg arm_id)_joint2: 1.6726948600233642
-  $(arg arm_id)_joint3: 1.5118505365806714
-  $(arg arm_id)_joint4: -1.8756355514986076
-  $(arg arm_id)_joint5: 1.4197607649034925
-  $(arg arm_id)_joint6: 3.1030749970917424
-  $(arg arm_id)_joint7: -2.334357038157276
+  $(arg arm_id)_joint1: 1.2990468770013481
+  $(arg arm_id)_joint2: 1.608538469916932
+  $(arg arm_id)_joint3: 1.42144731203715
+  $(arg arm_id)_joint4: -1.8333807171102157
+  $(arg arm_id)_joint5: 1.436847102795517
+  $(arg arm_id)_joint6: 2.958492565208011
+  $(arg arm_id)_joint7: -2.28869857490725
