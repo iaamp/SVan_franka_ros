@@ -1,0 +1,8 @@
+ws_center_joint_pose:
+  $(arg arm_id)_joint1: 0.8720425419891089
+  $(arg arm_id)_joint2: 1.5925842897270608
+  $(arg arm_id)_joint3: 1.294776188599594
+  $(arg arm_id)_joint4: -2.228555187559964
+  $(arg arm_id)_joint5: 1.3832561211453545
+  $(arg arm_id)_joint6: 2.9110935452412487
+  $(arg arm_id)_joint7: -2.3531864098031714
