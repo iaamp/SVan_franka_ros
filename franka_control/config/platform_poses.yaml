@@ -53,10 +53,10 @@ intermediate_joint_pose_1:
   $(arg arm_id)_joint7: -1.8939149357094032
 
 ws_center_joint_pose:
-  $(arg arm_id)_joint1: 0.8720425419891089
-  $(arg arm_id)_joint2: 1.5925842897270608
-  $(arg arm_id)_joint3: 1.294776188599594
-  $(arg arm_id)_joint4: -2.228555187559964
-  $(arg arm_id)_joint5: 1.3832561211453545
-  $(arg arm_id)_joint6: 2.9110935452412487
-  $(arg arm_id)_joint7: -2.3531864098031714
+  $(arg arm_id)_joint1: 1.254251339000552
+  $(arg arm_id)_joint2: 1.6726948600233642
+  $(arg arm_id)_joint3: 1.5118505365806714
+  $(arg arm_id)_joint4: -1.8756355514986076
+  $(arg arm_id)_joint5: 1.4197607649034925
+  $(arg arm_id)_joint6: 3.1030749970917424
+  $(arg arm_id)_joint7: -2.334357038157276
