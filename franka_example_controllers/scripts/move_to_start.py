@@ -33,7 +33,7 @@ point = JointTrajectoryPoint()
 point.time_from_start = ros.Duration.from_sec(
     # Use either the time to move the furthest joint with 'max_dq' or 500ms,
     # whatever is greater
-    max(max_movement / ros.get_param('~max_dq', 0.5), 0.5)
+    max(max_movement / ros.get_param('~max_dq', 0.1), 0.1)
 )
 goal = FollowJointTrajectoryGoal()
 

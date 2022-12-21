@@ -59,9 +59,9 @@ class Bring_in_platform:
         for i, pose in enumerate(self.poses):
             # After aligning gripper with platform handle: grip platform
             if i == 4:
-                time.sleep(2)
+                time.sleep(1)
                 self.pub_gripper_cmd.publish(self.gripper_open_cmd)
-                time.sleep(2)
+                time.sleep(1.5)
             if pose is None:
                 ros.logerr('bring platform out: Could not find required parameter ')
                 sys.exit(1)
@@ -76,7 +76,7 @@ class Bring_in_platform:
             point.time_from_start = ros.Duration.from_sec(
                 # Use either the time to move the furthest joint with 'max_dq' or 500ms,
                 # whatever is greater
-                max(max_movement / ros.get_param('~max_dq', 0.5), 0.5)
+                max(max_movement / ros.get_param('~max_dq', 0.1), 0.1)
             )
             goal = FollowJointTrajectoryGoal()
 
