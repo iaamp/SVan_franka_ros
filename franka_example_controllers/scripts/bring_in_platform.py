@@ -45,7 +45,7 @@ class Bring_in_platform:
         self.gripper_close_cmd.goal.command.max_effort = 1.0
 
         self.gripper_open_cmd = GripperCommandActionGoal()
-        self.gripper_open_cmd.goal.command.position = 0.04
+        self.gripper_open_cmd.goal.command.position = 0.033
         self.gripper_open_cmd.goal.command.max_effort = 1.0
         self.pub_gripper_cmd = ros.Publisher("/franka_gripper/gripper_action/goal", GripperCommandActionGoal, queue_size=10)
 
