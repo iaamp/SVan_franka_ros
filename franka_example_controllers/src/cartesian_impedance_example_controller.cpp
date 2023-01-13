@@ -219,6 +219,9 @@ void CartesianImpedanceExampleController::complianceParamCallback(
       << config.translational_stiffness * Eigen::Matrix3d::Identity();
   cartesian_stiffness_target_.bottomRightCorner(3, 3)
       << config.rotational_stiffness * Eigen::Matrix3d::Identity();
+  // Change z stiffness of robot
+  cartesian_stiffness_target_(5,5) = 5.0;
+  std::cout << cartesian_stiffness_target_ << std::endl;
   cartesian_damping_target_.setIdentity();
   // Damping ratio = 1
   cartesian_damping_target_.topLeftCorner(3, 3)
