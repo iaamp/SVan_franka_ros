@@ -20,7 +20,7 @@ class Bring_in_platform:
 
         self.action = ros.resolve_name('~follow_joint_trajectory')
         self.client = SimpleActionClient(self.action, FollowJointTrajectoryAction)
-        ros.loginfo("move_to_start: Waiting for '" + self.action + "' action to come up")
+        ros.loginfo("bring_in_platform: Waiting for '" + self.action + "' action to come up")
         self.client.wait_for_server()
 
         self.param_0 = ros.resolve_name('~ws_center_joint_pose')
@@ -91,7 +91,7 @@ class Bring_in_platform:
 
             result = self.client.get_result()
             if result.error_code != FollowJointTrajectoryResult.SUCCESSFUL:
-                ros.logerr('move_to_start: Movement was not successful: ' + {
+                ros.logerr('ring_in_platform: Movement was not successful: ' + {
                     FollowJointTrajectoryResult.INVALID_GOAL:
                     """
                     The joint pose you want to move to is invalid (e.g. unreachable, singularity...).
@@ -118,7 +118,7 @@ class Bring_in_platform:
                 }[result.error_code])
 
             else:
-                ros.loginfo('move_to_start: Successfully moved into start pose')
+                ros.loginfo('bring_in_platform: Successfully stored platform at base station')
 
 
 
