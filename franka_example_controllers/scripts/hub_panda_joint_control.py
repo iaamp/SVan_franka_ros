@@ -20,6 +20,8 @@ inside_window_pose = [-0.38711653370189636, 1.3470894337477093, 1.38230938898513
 before_maintenance_pose = [-0.6016448412192495, 1.1006669021828872, 1.249589584384048, -2.2272721897133994, 0.8649787907467947, 2.3848401197459963, -1.589397165185875]
 maintenance_pose = [-0.641380364711754, 1.2683572617080576, 1.3777927872134015, -2.1596437425446093, 1.5048078764087163, 2.7829607169363233, -2.1258594694738524]
 
+retrieve_window_pose = [-0.11835828049975038, 1.461076767560015, 1.3022900388617265, -2.5950532488085036, 0.12511512736992372, 2.48466894792185, -1.14743557330965]
+
 joints = ["panda_joint1", "panda_joint1", "panda_joint2", "panda_joint3", "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"]
 
 " Retrieve the UAV on the platform into the hub"
@@ -51,6 +53,12 @@ class HubPandaJointControl:
             before_maintenance_pose,
             maintenance_pose
         ]
+        self.retrieve_window_poses = [
+            retrieve_window_pose,
+            inside_window_pose,
+            before_maintenance_pose,
+            maintenance_pose
+        ]
         self.takeoff_to_landing_poses = [
             ws_center_pose
         ]
@@ -73,6 +81,8 @@ class HubPandaJointControl:
     def cb_trigger(self, msg):
         if msg.data == 'retrieve_uav':
             self.retrieve_uav()
+        elif msg.data == 'retrieve_window':
+            self.retrieve_window_uav()
         elif msg.data == 'send_uav':
             self.send_uav()
         elif msg.data == 'to_landing':
@@ -82,6 +92,11 @@ class HubPandaJointControl:
         print('retrieve uav')
         print("retrieve poses: ", self.retrieve_poses)
         self.run_joint_pose_trajectory(self.retrieve_poses)
+
+    def retrieve_window_uav(self):
+        print('retrieve uav')
+        print("retrieve poses: ", self.retrieve_window_poses)
+        self.run_joint_pose_trajectory(self.retrieve_window_poses)
 
     def send_uav(self):
         print('send uav')

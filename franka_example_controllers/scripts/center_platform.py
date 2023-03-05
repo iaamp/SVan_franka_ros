@@ -11,8 +11,7 @@ from control_msgs.msg import FollowJointTrajectoryAction, \
                              FollowJointTrajectoryGoal, FollowJointTrajectoryResult, GripperCommandActionGoal
 
 
-class \
-        Center_platform:
+class Center_platform:
     """Send commands for platform to move to base station of platform, grip it and bring it to WS center.
     """
 
@@ -41,7 +40,7 @@ class \
         self.main()
 
     def main(self):
-        time.sleep(10)
+        time.sleep(3)
 
         for i, pose in enumerate(self.poses):
             # After aligning gripper with platform handle: grip platform
